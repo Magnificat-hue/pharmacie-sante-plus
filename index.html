@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pharmacie Santé Plus, Agla</title>
+  <style>
+    :root { --vert:#0f7a5c; --vert-clair:#e6f4ef; --texte:#1d2b27; --gris:#5b6b66; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--texte); background:#fff; line-height:1.5; }
+    header { background:var(--vert); color:#fff; padding:56px 16px 64px; text-align:center; }
+    header h1 { font-size:clamp(1.8rem, 5vw, 2.8rem); margin-bottom:8px; }
+    header p { opacity:.9; max-width:560px; margin:0 auto; }
+    .badge { display:inline-block; background:#fff; color:var(--vert); font-weight:600; border-radius:999px; padding:6px 14px; margin-top:20px; font-size:.9rem; }
+    main { max-width:960px; margin:-32px auto 48px; padding:0 16px; }
+    .cartes { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px; }
+    .carte { background:#fff; border:1px solid #dfe9e5; border-radius:14px; padding:20px; box-shadow:0 4px 14px rgba(0,0,0,.05); }
+    .carte .ico { font-size:1.8rem; }
+    .carte h2 { font-size:1.05rem; margin:8px 0 4px; }
+    .carte p { color:var(--gris); font-size:.95rem; }
+    .appel { margin-top:32px; background:var(--vert-clair); border-radius:14px; padding:24px; text-align:center; }
+    .appel strong { color:var(--vert); }
+    footer { text-align:center; color:var(--gris); font-size:.85rem; padding:24px 16px 96px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>💊 Pharmacie Santé Plus</h1>
+    <p>Votre pharmacie de quartier à Agla, Cotonou. Posez vos questions à notre assistant, 24h/24.</p>
+    <span class="badge">Ouvert du lundi au samedi, 8h à 21h</span>
+  </header>
+
+  <main>
+    <div class="cartes">
+      <div class="carte"><div class="ico">🕒</div><h2>Horaires et gardes</h2><p>Sachez quand nous sommes ouverts et quand nous sommes de garde.</p></div>
+      <div class="carte"><div class="ico">💊</div><h2>Disponibilité</h2><p>Vérifiez si un produit est en stock avant de vous déplacer.</p></div>
+      <div class="carte"><div class="ico">🛵</div><h2>Livraison</h2><p>Livraison à Agla, Fidjrossè et environs.</p></div>
+      <div class="carte"><div class="ico">📱</div><h2>Paiement</h2><p>Espèces, MTN MoMo et Moov Money acceptés.</p></div>
+    </div>
+    <div class="appel">
+      <p>👉 Cliquez sur la bulle en bas à droite pour discuter avec <strong>Awa</strong>, notre assistante.</p>
+    </div>
+  </main>
+
+  <footer>Démo pédagogique, Masterclass « Créer et monétiser des chatbots IA ». Pharmacie fictive.</footer>
+
+  <!-- Widget Voiceflow : remplace VOTRE_PROJECT_ID.
+       Le plus sûr : copier le snippet exact depuis Voiceflow > Integrations > Web chat. -->
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: 'VOTRE_PROJECT_ID' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>

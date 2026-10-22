@@ -44,22 +44,21 @@
 
   <footer>Démo pédagogique, Masterclass « Créer et monétiser des chatbots IA ». Pharmacie fictive.</footer>
 
-  <!-- Widget Voiceflow : remplace VOTRE_PROJECT_ID.
-       Le plus sûr : copier le snippet exact depuis Voiceflow > Integrations > Web chat. -->
+  <!-- Widget Voiceflow : remplace VOTRE_PROJECT_ID. -->
   <script type="text/javascript">
-    (function(d, t) {
+  (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
         window.voiceflow.chat.load({
-          verify: { projectID: 'VOTRE_PROJECT_ID' },
+          verify: { projectID: '6ad9f86c1534df770f9d61e9' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
+          voice: {
+            url: 'https://runtime-api.voiceflow.com'
+          }
         });
-      };
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-      v.type = "text/javascript";
-      s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-  </script>
+      }
+      v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'; v.type = 'text/javascript'; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
 </body>
 </html>
